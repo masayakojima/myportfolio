@@ -1,0 +1,628 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: じゆうちょう;
+  src: url('https://cdn.leafscape.be/jiyucho/Jiyucho_web.woff2') format("woff2");
+}
+
+/* common */
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  font-family: 'Vollkorn', serif;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: calc(100% - 20px);
+
+}
+
+.head-border {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: 'Vollkorn', serif;
+  font-size: 40px;
+  color: rgb(59, 75, 90);
+  padding: 40px 0;
+}
+
+.head-border:before,
+.head-border:after {
+  content: "";
+  height: 1.5px;
+  flex-grow: 1;
+  background-color: rgb(59, 75, 90);
+  margin: 0 32px;
+}
+
+/* header */
+header {
+  background-color: rgb(59, 75, 90);
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10px;
+}
+
+.logo {
+  vertical-align: bottom;
+}
+
+.logo-pc {
+  display: none;
+}
+
+.bi-list {
+  display: inline-block;
+  color: white;
+  font-size: 30px;
+}
+
+.bi-list.hide {
+  display: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+li {
+  color: #fff;
+}
+
+.menu {
+  display: none;
+  background-color: rgb(59, 75, 90);
+  color: white;
+  text-decoration: none;
+  width: 100px;
+  text-align: center;
+  vertical-align: center;
+}
+
+.bi:hover {
+  opacity: .7;
+  cursor: pointer;
+}
+
+.menu:hover {
+  font-size: 17px;
+}
+
+/* ハンバーガーメニュー */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(59, 75, 90, 0.95);
+  text-align: center;
+  padding: 64px;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s;
+}
+
+.overlay .bi-x {
+  position: absolute;
+  top: 20px;
+  right: 16px;
+  font-size: 36px;
+  cursor: pointer;
+  color: white;
+}
+
+.overlay ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.overlay li {
+  margin-top: 64px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .3s, transform .3s;
+}
+
+.overlay a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay.show li {
+  opacity: 1;
+  transform: none;
+}
+
+.overlay.show li:nth-child(1) {
+  transition-delay: .1s;
+}
+
+.overlay.show li:nth-child(2) {
+  transition-delay: .2s;
+}
+
+.overlay.show li:nth-child(3) {
+  transition-delay: .3s;
+}
+
+/* お相撲さんイラスト */
+.osumou-top {
+  position: fixed;
+  bottom: 20px;
+  right: 0;
+  transform: rotate(0deg);
+  z-index: 5;
+  opacity: .8;
+}
+
+.osumou-clicknon {
+  pointer-events: none;
+}
+
+.osumou-top:hover {
+  cursor: pointer;
+}
+
+.osumou-top img {
+  padding-right: 8px;
+}
+
+.osumou-text {
+  font-family: じゆうちょう;
+  margin-left: 8px;
+}
+
+.start_animation_click {
+  animation-name: osumou-jump-before;
+  animation-duration: 1s;
+}
+
+@keyframes osumou-jump-before {
+  50% {
+    transform: rotate(-20deg)
+  }
+}
+
+
+/* hero */
+.hero {
+  background-image: url("https://256times-upload-files.s3.ap-northeast-1.amazonaws.com/production/101/4311/af880fc03d0175ac6ec908ba4f05cab9769dbdcc.jpg ");
+  background-size: cover;
+  background-position: center;
+  padding: 150px 10px;
+}
+
+.hero-text {
+  width: 240px;
+  height: 130px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  background-color: rgba(59, 75, 90, 0.6);
+  color: #fff;
+}
+
+.hero-text h1 {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 300;
+  width: 200px;
+  height: 80px;
+  font-family: serif;
+
+}
+
+.hero-text p {
+  font-size: 16px;
+  padding-bottom: 20px;
+  line-height: 40px;
+  font-family: Sans-Serif;
+  float: left;
+}
+
+/* concept */
+.concepts {
+  background: #f0e9de;
+}
+
+.concepts .container {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.concept-title,
+p {
+  margin: auto;
+  text-align: center;
+}
+
+.concept-title {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.concept-number {
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  top: -20px;
+  left: -22px;
+  border-radius: 50%;
+  background: rgb(59, 75, 90);
+  color: white;
+  letter-spacing: 1px;
+}
+
+.concept-image {
+  text-align: center;
+}
+
+.concept img {
+  max-width: 300px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+.concept {
+  padding-bottom: 50px;
+}
+
+.concept-title {
+  font-family: 'Vollkorn', serif;
+  font-size: 24px;
+  max-width: 300px;
+  border: 1px solid rgb(59, 75, 90);
+}
+
+.concept-text p {
+  font-family: 'Vollkorn', serif;
+  max-width: 800px;
+}
+
+/* service */
+.services {
+  position: absolute;
+  width: 100%;
+  z-index: -2;
+  background-color:#e2d0e663;
+}
+.service {
+  margin-bottom: 40px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.services .container {
+  padding-bottom: 30px;
+}
+
+.services .head-border {
+  padding: 10px 0 50px 0;
+}
+
+.service-image {
+  text-align: center;
+  margin: 0 40px;
+}
+
+.service-image img {
+  height: auto;
+  opacity: .8;
+  width: 270px;
+}
+
+.service-item1 {
+  object-position: 10%;
+}
+
+.service-item3 {
+  object-position: 100%;
+}
+
+.service-item4 {
+  object-position: 70%;
+}
+
+.service h3 {
+  text-align: center;
+  font-size: 32px;
+}
+
+
+/* gallery */
+
+.gallery {
+  padding-bottom: 20px;
+  background: #f0e9de;
+}
+
+/* slick */
+.slider {
+  width: 90%;
+  margin: 0 auto;
+}
+.slider img {
+  width: 30vw;
+  height: auto;
+}
+.slider .slick-slide {
+  transform: scale(0.8);
+  transition: all 1s;
+  opacity: 0.3;
+}
+.slider .slick-slide.slick-center {
+  transform: scale(1);
+  opacity: 1;
+}
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 42%;
+  cursor: pointer;
+  outline: none;
+  border-top: 6px solid white;
+  border-right: 6px solid white;
+  height: 20px;
+  width: 20px;
+  opacity:.7;
+}
+
+.slick-prev:hover,
+.slick-next:hover{
+  opacity:1;
+}
+.slick-prev {
+  left: 1%;
+  transform: rotate(-135deg);
+  z-index: 1;
+}
+.slick-next {
+  right: 1%;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+.slider {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  background: rgba(59, 75, 90, 0.8);
+}
+
+
+
+
+/* footer */
+footer {
+  background-color: #f4f3df;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.footer-logo {
+  margin-top: 70px;
+}
+
+.footer-list {
+  max-width: 250px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+dl {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+dt {
+  width: 40%;
+  margin-bottom: 20px;
+}
+
+dd {
+  width: 60%;
+  margin-bottom: 20px;
+  margin-left: 0;
+}
+
+.bi-instagram {
+  color: #e7973a;
+}
+
+.bi-twitter {
+  color: #1d9bf0;
+  margin-left: 40px;
+}
+
+.bi-facebook {
+  color: #1877f2;
+  margin-left: 40px;
+}
+
+.sns-icon {
+  font-size: 40px;
+  margin-top: 60px;
+}
+
+small {
+  font-size: 14px;
+}
+
+
+
+/* pc用 */
+@media(min-width:1100px) {
+
+  /* header */
+  header .container {
+    padding-top: 25px;
+    padding-left: 30px;
+  }
+
+  .logo-pc {
+    display: inline-block;
+  }
+
+  .logo-sp,
+  .bi-list,
+  .bi-x {
+    display: none;
+  }
+
+  .menu {
+    display: inline-block;
+  }
+
+  /* osumousan */
+  .sumou1 {
+    width: 140px;
+  }
+
+  /* hero  */
+  .hero {
+    padding: 220px 70px;
+  }
+
+  .hero-text {
+    width: 480px;
+    height: 250px;
+    padding: 20px 40px;
+    letter-spacing: 5%;
+  }
+
+  .hero-text h1 {
+    width: 400px;
+    height: 160px;
+    font-weight: 500;
+    line-height: 80px;
+    font-size: 48px;
+  }
+
+  .hero-text p {
+    font-weight: 300;
+    margin-top: 30px;
+    line-height: 28px;
+    font-size: 24px;
+  }
+
+  /* concept */
+  .concepts .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+  }
+
+  .concept {
+    max-width: 300px;
+  }
+
+  .concept img {
+    max-width: initial;
+    width: 300px;
+  }
+
+  .concept-title {
+    max-width: 300px;
+    padding: 7px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .head-border {
+    font-size: 56px;
+    padding: 80px 0;
+    letter-spacing: 3px;
+  }
+
+  .reversed {
+    flex-direction: row-reverse;
+  }
+
+  /* service */
+  .services .head-border {
+    padding: 50px 0 50px 0;
+  }
+
+  .service {
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .servise-text {
+    flex: 1;
+  }
+
+  .service-image img {
+    width: 400px;
+    height: auto;
+  }
+
+  .services .container {
+    padding: 40px 20px;
+  }
+
+  .service-text h3,
+  .service-text p {
+    text-align: left;
+    margin-bottom: 16px;
+  }
+
+  /* gallery */
+  .slider {
+    width: 94%;
+    margin: 0 auto;
+  }
+  .gallery img {
+    width: 300px;
+  }
+
+  /* footer  */
+  .footer-info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-logo {
+    width: 300px;
+    height: 120px;
+    margin-top: 100px;
+    margin-left: 140px;
+  }
+
+  .footer-list {
+    margin-top: 80px;
+    flex: 1;
+    max-width: 250px;
+  }
+}

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ニゴロニュース</title>
+  <link rel="stylesheet" href="256times-styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>code{background:#d3d3d3;
+              font-size:16px;}</style>
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <a href="256times.html">
+      <h1 class="header-logo"> <img
+          src="https://256times-upload-files.s3.ap-northeast-1.amazonaws.com/production/101/4386/3a474dd73fce5687439490a52e7cde3b8a94ff06.png"
+          width="300"></h1>
+    </a>
+  </header>
+
+  <!-- main -->
+  <div class="main">
+    <!--article  -->
+    <div class="article-section">
+      <div class="container">
+        <h1 class="title">レスポンシブデザインの重要性と実装方法</h1>
+        <img src="https://256times-upload-files.s3.ap-northeast-1.amazonaws.com/production/702833/4335/7371422690e2956e8d5aa50f477f104b794589c2.jpg" width="400" class="article-img">
+        <article>
+          <h3>レスポンシブデザインとは</h3>
+          <p>メディアクエリは、CSS3の機能の1つであり、特定の条件に基づいてスタイルを適用するために使用されます。例えば、デバイスの幅や高さ、画面の向きなどによって異なるスタイルを適用することができます。
+          <code>
+            css
+            @media screen and (max-width: 600px) {
+              body {
+                background-color: lightblue;
+              }
+            }
+          </code></p>
+          <h3>フレキシブルな画像とコンテンツ</h3>
+          <p>レスポンシブデザインでは、画像やコンテンツもデバイスのサイズに合わせて適切に表示する必要があります。画像のサイズをパーセンテージで指定したり、max-widthプロパティを使用して拡大縮小可能な画像を設定したりすることが重要です。
+            <code>
+            css
+            img {
+              max-width: 100%;
+              height: auto;
+            }</code>
+          </p>
+          <h3>レスポンシブフレームワークの活用</h3>
+          <p>BootstrapやFoundationなどのレスポンシブフレームワークを使用することで、レスポンシブデザインを容易に実装することができます。これらのフレームワークには、グリッドシステムやレスポンシブなコンポーネントが含まれており、効率的な開発を支援します。</p>
+          <div class="conclusion">
+            以上が、レスポンシブデザインの重要性と実装方法についての基本的な内容です。これを参考にして、ウェブサイトやアプリケーションのレスポンシブデザインを実装し、ユーザー体験の向上に役立ててください。</div>
+        </article>
+        <div class="times-video">
+        <h4>参加型プログラミング勉強会２５６timesについてはこちら</h4>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/5OXQVQ097nI?si=Ht5UXuRyWHTJaEZw"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- connection sp用 -->
+      <div class="side-connection sp">
+        <h3>関連記事</h3>
+        <a href="#">
+          <div class="ranking">
+            <img src="https://256times-upload-files.s3.ap-northeast-1.amazonaws.com/production/702833/4337/191953ffb3b08deb70516487b53c6979fe89d8e9.jpg" width="128">
+            <p>モバイルファーストのデザイン戦略</p>
+        </div>
+      </a>  
+        <a href="#">
+          <div class="ranking">
+            <img src="https://256times-upload-files.s3.ap-northeast-1.amazonaws.com/production/702833/4339/a1db3f5d91a8fb09df894e36b2c7d3b3686a8295.jpg" width="128">
+            <p>はじめての256times</p>
+        </div>
+      </a>
+      </div>
+
+      <!-- introduction -->
+      <div class="introduction">
+        <h4>この記事を書いた人</h4>
+        <div class="introduction-items">
+          <div class="introduction-left">
+            <img
+              src="https://256times-upload-files.s3.ap-northeast-1.amazonaws.com/production/702833/4344/066a9f0d73457344aa811d1c82da069b3d888368.png"
+              width="120">
+            <p>Jessica</p>
+          </div>
+          <div class="introduction-right">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident totam accusantium doloremque deserunt
+              sunt soluta non ipsam, molestiae quisquam optio suscipit nam. Consectetur dolorem repellendus libero natus
+              veritatis magnam tempore.</p>
+            <div class="icons">
+              <a href="#" target="_blank"><i class="bi bi-twitter"></i></a>
+              <a href="#" target="_blank"><i class="bi bi-facebook"></i></a>
+            </div>
+            <div class="page-change">
+              <a href="256times.html">他の記事を見る</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- side -->
+    <section class="side">
+      <img
+        src="https://256times-upload-files.s3.ap-northeast-1.amazonaws.com/production/702833/4356/8ebf178261d886ba8674f4cc6eae6229f8e90de9.jpg"
+        width="336" class="burner">
+      <div class="side-title">
+        <h3><a href="256times.html">HOME</a></h3>
+      </div>
+      <div class="side-categorys">
+        <h3>カテゴリー</h3>
+        <ul>
+          <li>WEBデザイン</li>
+          <li>ソフトウェア開発</li>
+          <li>サイト管理</li>
+          <li>オウンドメディア</li>
+          <li>WEB最新トレンド</li>
+        </ul>
+      </div>
+      <div class="side-ranking">
+        <h3>人気記事<i class="bi bi-award-fill"></i></h3>
+        <a href="256times-4.html">
+          <div class="ranking">
+            <img
+              src="https://256times-upload-files.s3.ap-northeast-1.amazonaws.com/production/702833/4334/602cab9a823ee99edd06b43d3489f6c48248fc84.jpg"
+              width="128">
+            <p>フロントエンドエンジニアになるためのステップ</p>
+          </div>
+        </a>
+        <a href="256times-2.html">
+          <div class="ranking">
+            <img
+              src="https://256times-upload-files.s3.ap-northeast-1.amazonaws.com/production/702833/4336/7edfdd1f0ed0559bbe3c6b1e2666c0f34217cd1f.jpg"
+              width="128">
+            <p>オウンドメディアの作り方：成功するためのステップバイステップガイド</p>
+          </div>
+        </a>
+        <a href="256times-1.html">
+          <div class="ranking">
+            <img
+              src="https://256times-upload-files.s3.ap-northeast-1.amazonaws.com/production/702833/4333/9569c016d2158f2828b4064456eec90dc43d6ec9.jpg"
+              width="128">
+            <p>ChatGPTを使ったプログラミング：効率的な開発のための活用法</p>
+          </div>
+        </a>
+      </div>
+      <div class="side-connection">
+        <h3>関連記事</h3>
+        <a href="#">
+          <div class="ranking">
+            <img src="https://256times-upload-files.s3.ap-northeast-1.amazonaws.com/production/702833/4337/191953ffb3b08deb70516487b53c6979fe89d8e9.jpg" width="128">
+            <p>モバイルファーストのデザイン戦略</p>
+        </div>
+      </a>  
+        <a href="#">
+          <div class="ranking">
+            <img src="https://256times-upload-files.s3.ap-northeast-1.amazonaws.com/production/702833/4339/a1db3f5d91a8fb09df894e36b2c7d3b3686a8295.jpg" width="128">
+            <p>はじめての256times</p>
+        </div>
+      </a>  
+      </div>
+      <div class="burner-side">
+        <img
+          src="https://256times-upload-files.s3.ap-northeast-1.amazonaws.com/production/702833/4355/fa55b234775629317e87815a18268e332f8dd37f.jpg"
+          width="336">
+      </div>
+    </section>
+    <!-- 検索バー -->
+    <form class="search">
+      <input type="text" class="input" placeholder="キーワードを入力">
+      <button class="btn">
+        検索
+      </button>
+    </form>
+  </div>
+  <!-- footer &burner -->
+  <img
+    src="https://256times-upload-files.s3.ap-northeast-1.amazonaws.com/production/702833/4354/1b04beae6e72af7fc1b4d39c67723cda9b9af01f.jpg"
+    width="400" class="sp-burner">
+  <footer>
+    <!-- 「(c) 256times.com」を含めてください -->
+    <small>(c) 256times.com</small>
+  </footer>
+  <!-- JS -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,297 @@
+@charset "utf-8";
+
+/* 自由に記述してかまいません */
+/* common */
+body,h1,p{
+  margin:0;
+}
+
+ article p{
+  line-height:1.87;
+}
+img{
+  vertical-align: bottom;
+}
+a{
+  text-decoration:none;
+  color:black;
+}
+
+.main{
+  display:flex;
+  justify-content: space-between;
+}
+.container{
+  margin:auto;
+}
+
+/* header */
+header{
+  background: rgba(51, 51, 51, 1);
+  display:flex;
+  align-items:center;
+}
+.header-logo img{
+  width:150px;
+  padding:25px 0 20px 20px;
+}
+
+/* articles */
+.article-section{
+  padding:100px 100px 80px 100px;
+  max-width:800px;
+}
+.article-section img{
+  width:100%;
+}
+article{
+  padding:0 16px;
+}
+article h3{
+  margin-top:50px;
+}
+article img{
+  margin:16px 0;
+}
+.title{
+  margin-bottom:40px;
+}
+.conclusion{
+  margin-top:20px;
+}
+.times-video{
+  margin:100px auto 0;
+  text-align:center;
+}
+
+
+/* introduction */
+.introduction{
+   margin-top:50px;
+   padding: 50px 16px;
+}
+.introduction h4{
+  border-bottom:2px solid black;
+  padding-bottom:8px;
+}
+.introduction-items{
+  display:flex;
+  gap:16px
+}
+.introduction-comment{
+  background:#eee;
+  border-radius:20px;
+}
+.icons{
+  display:flex;
+  gap:16px;
+}
+.bi-twitter{
+ color:#1ca1f2;
+ font-size:24px;
+}
+.bi-facebook{
+  color:#4167b1;
+  font-size:24px;
+}
+
+.page-change{
+  position:relative;
+  height:36px;
+}
+.page-change a{
+  color:black;
+  position:absolute;
+  bottom:0px;
+  right:0px;
+  text-decoration:underline;
+}
+.another{
+  text-decoration:underline;
+}
+
+
+/* footer*/
+.sp-burner{
+  width:100%;
+  cursor:pointer;
+}
+footer{
+  background: rgba(51, 51, 51, 1);
+  color:rgba(255, 255, 255, 1);
+  text-align:center;
+  height:80px;
+}
+footer small{
+  display:inline-block;
+  padding-top:30px;
+}
+
+/* side */
+.side{
+  padding:100px 100px 20px 0 ;
+  width:30%;
+  position:relative;
+}
+.side-title{
+  border-top:4px solid black;
+  margin-top:50px;
+}
+.side-categorys{
+  border-top:4px solid black;
+}
+ li + li{
+  margin-top:8px;
+}
+li{
+  cursor:pointer;
+}
+li:hover{
+  text-decoration:underline;
+}
+.burner{
+  display:block;
+  margin:auto;
+  cursor:pointer;
+}
+.side-ranking,.side-connection{
+  border-top:4px solid black;
+}
+.bi-award-fill{
+  margin-left:8px;
+}
+.ranking{
+  display:flex;
+  margin-bottom:16px;
+} 
+.ranking p{
+  font-weight:500;
+  margin-left:16px;
+}
+.ranking:hover{
+  opacity:.7;
+  text-decoration:underline;
+}
+.burner-side img{
+  display:block;
+  margin: 180px auto 0;
+  cursor:pointer;
+}
+.ranking p{
+  font-weight:bold;
+  margin-left:16px;
+}
+.sp{
+  display:none;
+}
+/* search */
+.search{
+  position:absolute;
+  top:130px;
+  right:30px;
+}
+.btn{
+  cursor:pointer;
+}
+
+
+/* sp用1200px以下 */
+/* header */
+@media(max-width:1200px){
+  .header-sp{
+    display:block;
+  }
+  .spline{
+    display:none;
+  }
+  .article-section{
+    width:80%;
+    margin:auto;
+    padding:100px 0 30px;
+  }
+  .articles{
+    padding:100px 0 100px;
+    width:70%; 
+    margin:auto;
+  }
+  .between-burner{
+    display:block;
+  }
+
+  /* main */
+  .main{
+    flex-direction: column;
+  }
+  .articles{
+    padding-bottom:30px;
+  }
+
+  /* side */
+  .side{
+    width:80%;
+    margin:auto;
+    padding:0 0 40px;
+  }
+  .side img{
+    width:80%;
+    max-width:400px; 
+  }
+  .burner{
+    display:none;
+  }
+  
+  .burner-long{
+    display:none;
+  }
+  .side-ranking{
+    display:none;
+  }
+  .side-ranking img,.side-connection img{
+    display:inline-block;
+    width:30%;
+    height:auto;
+  }
+  .side-title{
+    display:none;
+  }
+  .side-categorys,.side-ranking,.side-connection{
+    border-top:1px solid #666;
+  }
+  .burner-side img{
+    display:none;
+  }
+  .side-connection{
+    display:none;
+  }
+  .sp{
+    display:block;
+    margin-top:150px;
+  }
+  /*動画  */
+  iframe{
+    width:80%;
+  }
+  
+  
+}
+  
+@media(max-width:600px){
+   h2{
+    font-size:15px;
+  }
+   p{
+    font-size:12px;
+  }
+   h3{
+    font-size:15px;
+  }
+  .side-categorys li,.side-ranking p,.conclusion{
+    font-size:13px;
+  }
+  iframe{
+    width:100%;
+  }
+
+}
+
+
