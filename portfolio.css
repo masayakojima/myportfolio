@@ -1,0 +1,177 @@
+@charset "utf-8";
+
+/* common */
+body{
+  margin:0;
+}
+h1,h2,p{
+  margin:0;
+}
+h1{
+  color:white;
+}
+ul,li{
+  margin:0;
+  padding:0;
+}
+a{
+  text-decoration: none;
+  color:black;
+}
+
+/* title */
+header h1{
+  font-size: 128px;
+  color:white;
+  font-weight: 400;
+  text-align:center;
+  padding-top:33px;
+}
+
+
+/* main */
+.container{
+  width:90%;
+  height:600px;
+  margin: 0 auto 30px;
+  position:relative;
+  overflow:hidden;
+}
+.sliders{
+  display:flex;
+}
+.slider-items{
+  margin:0;
+  padding:0;
+  list-style:none;
+  min-width:100%;
+  height:100%;
+  display:flex;
+  justify-content: space-between;
+}
+
+.slider-item{
+  background:rgba(255,255,255,0);
+  border:1px solid white;
+  width: 400px;
+  height: 450px;
+  margin-top:100px;
+}
+.slider-item:nth-child(1){
+  margin-left:15%;
+}
+.slider-item:nth-child(2){
+  margin-right:15%;
+}
+.slider-box{
+  display:block;
+  color:black;
+  text-decoration: none;
+  text-align:center;
+  padding:40px 0;
+  color:white;
+  cursor:default;
+}
+.slider-box img{
+  width:90%; 
+  border:1px solid white;
+}
+.slider-box h2{
+  margin-top:20px;
+}
+.slider-box p{
+  margin-top:8px;
+  letter-spacing:3.12px;
+}
+.link-buttons{
+  display:flex;
+  justify-content: space-between;
+  margin:5px auto 0;
+  width:85%;
+  gap:16px;
+}
+.detail-button,.webpage-button{
+  width:130px;
+  border:2px solid white;
+  text-align: center;
+  font-size:18px;
+  padding:4px 12px;
+  border-radius:5px;
+  color:white;
+}
+.detail-button:hover,.webpage-button:hover{
+ opacity:.8;
+ background:white;
+ color:#232741;
+}
+
+/* button */
+#prev,#next{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  border:none;
+  border-radius:50%;
+  font-size:36px;
+  padding:0 13px 4px;
+  cursor:pointer;
+}
+#prev{ 
+  left:0;
+}
+#next{
+  right:0;
+}
+#prev:hover,#next:hover{
+  opacity:.7;
+}
+.hidden{
+  display:none;
+}
+
+#particles-js{ 
+	position:fixed;
+	z-index:-1;
+	width: 100%;
+	height: 100%;
+  background:#232741;
+}
+
+/* sp用(1300px) */
+@media(max-width:1300px){
+  header h1{
+    text-align:center;
+    font-size:60px;
+  }
+ .container{
+  overflow:visible;
+ }
+ .sliders{
+  display:block;
+ }
+ .slider-item:nth-child(1){
+  margin-left:0;
+}
+.slider-item:nth-child(2){
+  margin-right:0;
+}
+.slider-items{
+  flex-direction: column;
+  margin:auto;
+  align-items: center;
+  padding-bottom:30px;
+ }
+ .slider-item{
+  width:300px;
+  height:auto;
+  padding-bottom:20px;
+ }
+ .detail-button,.webpage-button{
+  width:130px;
+  font-size:13px;
+}
+ #prev,#next{
+  display:none;
+}
+  
+}
